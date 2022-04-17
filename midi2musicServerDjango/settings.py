@@ -79,10 +79,16 @@ WSGI_APPLICATION = 'midi2musicServerDjango.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+#配置数据库
+#mysql
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'midi2music',
+        'USER': 'root',
+        'PASSWORD' : '123',
+        'HOST' : 'localhost',
+        'PORT' : '3306'
     }
 }
 
